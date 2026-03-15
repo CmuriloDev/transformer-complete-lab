@@ -11,7 +11,7 @@ def generate_sequence(model, encoder_input, start_token=1, eos_token=0, max_len=
 
         decoder_input = np.random.randn(1, len(generated), 512)
 
-        decoder_output = model.decode(decoder_input, encoder_output, mask=None)
+        decoder_output = model.decode(decoder_input, encoder_output)
 
         probs = model.project(decoder_output[:, -1, :])
 
