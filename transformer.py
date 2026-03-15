@@ -18,8 +18,8 @@ class Transformer:
     def encode(self, x):
         return self.encoder.forward(x)
 
-    def decode(self, y, encoder_output, mask):
-        return self.decoder.forward(y, encoder_output, mask)
+    def decode(self, y, encoder_output):
+        return self.decoder.forward(y, encoder_output)
 
     def project(self, x):
         logits = x @ self.linear
