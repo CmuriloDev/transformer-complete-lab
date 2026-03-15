@@ -1,7 +1,7 @@
 # Transformer Complete Lab (From Scratch)
 
-Academic project for the course Artificial Intelligence Topics
-Professor: Dimmy Magalhães
+Academic project for the course Artificial Intelligence Topics  
+Professor: Dimmy Magalhães  
 Institution: Faculdade iCEV
 
 ## Overview
