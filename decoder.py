@@ -2,6 +2,7 @@ import numpy as np
 from attention import scaled_dot_product_attention
 from ffn import FeedForward
 from add_norm import AddNorm
+from mask import create_causal_mask
 
 
 class DecoderBlock:
@@ -12,7 +13,10 @@ class DecoderBlock:
         self.add_norm2 = AddNorm()
         self.add_norm3 = AddNorm()
 
-    def forward(self, y, encoder_output, mask):
+    def forward(self, y, encoder_output):
+
+        seq_len = y.shape[1]
+        mask = create_causal_mask(seq_len)
 
         Q = y
         K = y
